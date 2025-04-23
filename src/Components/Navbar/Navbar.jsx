@@ -1,8 +1,13 @@
 import React from 'react';
+import { NavLink } from 'react-router';
+
+const getLinkClass = ({ isActive }) =>
+    isActive ? 'text-green-600 font-semibold' : 'text-gray-600';
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar">
+            {/* Start */}
             <div className="navbar-start">
                 {/* Mobile Dropdown */}
                 <div className="dropdown lg:hidden">
@@ -13,33 +18,35 @@ const Navbar = () => {
                                 d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </label>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Home</a></li>
-                        <li><a>My-Bookings</a></li>
-                        <li><a>Blogs</a></li>
-                        <li><a>Contact Us</a></li>
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-gray-600 font-medium">
+                        <li><NavLink to="/" className={getLinkClass}>Home</NavLink></li>
+                        <li><NavLink to="/LawyerDetails/l" className={getLinkClass}>My-Bookings</NavLink></li>
+                        <li><NavLink to="/blogs" className={getLinkClass}>Blogs</NavLink></li>
+                        <li><NavLink to="/contact" className={getLinkClass}>Contact Us</NavLink></li>
                     </ul>
                 </div>
                 {/* Logo */}
-                <a className="flex items-center gap-2 text-xl font-bold text-gray-800 btn btn-ghost normal-case">
+                <NavLink to="/" className="flex items-center gap-2 text-xl font-bold text-gray-800 btn btn-ghost normal-case">
                     <img src="C002-assets/logo.png" alt="logo" className="w-6 h-6" />
                     <span>Law.BD</span>
-                </a>
+                </NavLink>
             </div>
 
-            {/* Center Nav - Large screen only */}
+            {/* Center - Desktop Only */}
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 text-gray-600 font-medium">
-                    <li><a>Home</a></li>
-                    <li><a>My-Bookings</a></li>
-                    <li><a>Blogs</a></li>
-                    <li><a>Contact Us</a></li>
+                    <li><NavLink to="/" className={getLinkClass}>Home</NavLink></li>
+                    <li><NavLink to="/LawyerDetails/l" className={getLinkClass}>My-Bookings</NavLink></li>
+                    <li><NavLink to="/blogs" className={getLinkClass}>Blogs</NavLink></li>
+                    <li><NavLink to="/contact" className={getLinkClass}>Contact Us</NavLink></li>
                 </ul>
             </div>
 
             {/* End */}
             <div className="navbar-end">
-                <a className="btn bg-green-600 text-white hover:bg-green-700">Contact Now</a>
+                <NavLink to="/contact" className="btn bg-green-600 text-white hover:bg-green-700">
+                    Contact Now
+                </NavLink>
             </div>
         </div>
     );
