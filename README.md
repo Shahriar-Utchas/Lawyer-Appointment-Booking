@@ -1,10 +1,8 @@
 # 🧪 Lawyer Appointment Booking Application
 
-## Overview
 This is a React-based web application for booking appointments with lawyers. The application allows users to browse lawyer profiles, schedule appointments, and view all their bookings. It includes interactive UI elements, data persistence, routing, charts for visualizing fees, and a custom error page for invalid routes.
 
----
-## 🚀 Live Demo: 
+## 🚀 Live Demo: https://lawyer-appointment-booking-by-utchas.netlify.app/
 
 
 ## 🧩 Features
