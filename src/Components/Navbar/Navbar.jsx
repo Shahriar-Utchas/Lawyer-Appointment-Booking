@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router';
+import { Link } from 'react-scroll';
 
 const getLinkClass = ({ isActive }) =>
     isActive ? 'text-green-600 font-semibold' : 'text-gray-600';
@@ -22,7 +23,7 @@ const Navbar = () => {
                         <li><NavLink to="/" className={getLinkClass}>Home</NavLink></li>
                         <li><NavLink to="/LawyerDetails/l" className={getLinkClass}>My-Bookings</NavLink></li>
                         <li><NavLink to="/blogs" className={getLinkClass}>Blogs</NavLink></li>
-                        <li><NavLink to="/contact" className={getLinkClass}>Contact Us</NavLink></li>
+                        <li><Link to="footer" smooth={true} duration={500}>Contact Us</Link></li>
                     </ul>
                 </div>
                 {/* Logo */}
@@ -38,7 +39,7 @@ const Navbar = () => {
                     <li><NavLink to="/" className={getLinkClass}>Home</NavLink></li>
                     <li><NavLink to="/LawyerDetails/l" className={getLinkClass}>My-Bookings</NavLink></li>
                     <li><NavLink to="/blogs" className={getLinkClass}>Blogs</NavLink></li>
-                    <li><NavLink to="/contact" className={getLinkClass}>Contact Us</NavLink></li>
+                    <li><Link to="footer" smooth={true} duration={1000}>Contact Us</Link></li>
                 </ul>
             </div>
 
