@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router';
-import { Button, Link } from 'react-scroll';
+import { Button } from 'react-scroll';
 
 const getLinkClass = ({ isActive }) =>
     isActive ? 'text-green-600 font-semibold' : 'text-gray-600';
@@ -23,7 +23,7 @@ const Navbar = () => {
                         <li><NavLink to="/" className={getLinkClass}>Home</NavLink></li>
                         <li><NavLink to="/Bookings" className={getLinkClass}>My-Bookings</NavLink></li>
                         <li><NavLink to="/blogs" className={getLinkClass}>Blogs</NavLink></li>
-                        <li><Link to="footer" smooth={true} duration={500}>Contact Us</Link></li>
+                        <li><NavLink to="/contact" className={getLinkClass}>Contact Us</NavLink></li>
                     </ul>
                 </div>
                 {/* Logo */}
@@ -39,7 +39,8 @@ const Navbar = () => {
                     <li><NavLink to="/" className={getLinkClass}>Home</NavLink></li>
                     <li><NavLink to="/Bookings" className={getLinkClass}>My-Bookings</NavLink></li>
                     <li><NavLink to="/blogs" className={getLinkClass}>Blogs</NavLink></li>
-                    <li><Link to="footer" smooth={true} duration={1000}>Contact Us</Link></li>
+                    <li><NavLink to="/contact" className={getLinkClass}>Contact Us</NavLink></li>
+
                 </ul>
             </div>
 
