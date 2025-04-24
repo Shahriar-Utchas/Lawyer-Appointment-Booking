@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getBookings, removeBooking } from '../../Utilities/LocalStorage';
-import { useLoaderData, useLocation, useNavigate } from 'react-router';
+import { Link, useLoaderData, useLocation, useNavigate } from 'react-router';
 import Booking from '../Booking/Booking';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -92,8 +92,13 @@ const Bookings = () => {
                     <Booking key={lawyer.id} lawyer={lawyer} handleRemoveBooking={handleRemoveBooking} />
                 ))
             ) : (
-                <p className="text-center text-gray-500 my-4 min-h-[25vh]">No bookings available.</p>
+                <div className="flex flex-col items-center justify-center min-h-[28vh] text-center">
+                    <p className="text-gray-500 mb-4">No bookings available.</p>
+                    <Link to={`/`}><button className='btn btn-success'>Add Bookings</button></Link>
+                </div>
+
             )}
+
 
             {/* Toasts */}
             <ToastContainer

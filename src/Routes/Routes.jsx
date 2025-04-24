@@ -33,7 +33,8 @@ export const router = createBrowserRouter([
                 Component: Bookings,
                 loader: () => fetch("../LawyerData.json"),
                 hydrateFallbackElement: <p>Loading, Please Wait....</p>,
-            }
+            },
+
         ],
     },
 ]);
