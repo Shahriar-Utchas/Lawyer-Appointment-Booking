@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router';
-import { Link } from 'react-scroll';
+import { Button, Link } from 'react-scroll';
 
 const getLinkClass = ({ isActive }) =>
     isActive ? 'text-green-600 font-semibold' : 'text-gray-600';
@@ -45,9 +45,9 @@ const Navbar = () => {
 
             {/* End */}
             <div className="navbar-end">
-                <NavLink to="/contact" className="btn bg-green-600 text-white hover:bg-green-700">
+                <Button className="btn bg-green-600 text-white hover:bg-green-700">
                     Contact Now
-                </NavLink>
+                </Button>
             </div>
         </div>
     );

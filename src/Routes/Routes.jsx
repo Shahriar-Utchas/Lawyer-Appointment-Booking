@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 import Root from "../Layouts/Root";
 import Home from "../Pages/Home/Home";
 import LawyerDetails from "../Pages/LawyerDetails/LawyerDetails";
+import Blogs from "../Pages/Blogs/Blogs";
 
 export const router = createBrowserRouter([
     {
@@ -17,6 +18,12 @@ export const router = createBrowserRouter([
             {
                 path: "/lawyerDetails/:id",
                 Component: LawyerDetails,
+                loader: () => fetch("../LawyerData.json"),
+                hydrateFallbackElement: <p>Loading, Please Wait....</p>,
+            },
+            {
+                path: "/blogs",
+                element: <Blogs></Blogs>
             }
         ],
     },

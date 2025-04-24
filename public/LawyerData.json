@@ -1,6 +1,6 @@
 [
   {
-    "id": "lawyer_001",
+    "id": "001",
     "image": "https://i.ibb.co.com/271M35W7/6M.jpg",
     "name": "Matt Murdock",
     "speciality": "Criminal Expert",
@@ -10,7 +10,7 @@
     "availability": "Sunday, Wednesday, Tuesday, Friday, Saturday"
   },
   {
-    "id": "lawyer_002",
+    "id": "002",
     "image": "https://i.ibb.co.com/xSnqcDgH/9M.jpg",
     "name": "Samiul Karim",
     "speciality": "Property Law",
@@ -20,7 +20,7 @@
     "availability": "Tuesday, Friday, Wednesday"
   },
   {
-    "id": "lawyer_003",
+    "id": "003",
     "image": "https://i.ibb.co.com/1G6Y9zJy/8F.jpg",
     "name": "Nilufa Sultana",
     "speciality": "Intellectual Property Law",
@@ -30,7 +30,7 @@
     "availability": "Sunday, Wednesday, Thursday, Tuesday"
   },
   {
-    "id": "lawyer_004",
+    "id": "004",
     "image": "https://i.ibb.co.com/p66xmJwH/4M.jpg",
     "name": "Rezaul Haque",
     "speciality": "Intellectual Property Law",
@@ -40,7 +40,7 @@
     "availability": "Sunday, Tuesday, Saturday, Friday"
   },
   {
-    "id": "lawyer_005",
+    "id": "005",
     "image": "https://i.ibb.co.com/1Y9nfNp2/5F.webp",
     "name": "Tania Ahmed",
     "speciality": "Family Law",
@@ -50,7 +50,7 @@
     "availability": "Friday, Saturday, Monday, Thursday, Wednesday"
   },
   {
-    "id": "lawyer_006",
+    "id": "006",
     "image": "https://i.ibb.co.com/S4dg1ZZp/3M.jpg",
     "name": "Mehedi Hasan",
     "speciality": "Intellectual Property Law",
@@ -60,7 +60,7 @@
     "availability": "Thursday, Wednesday, Friday, Sunday"
   },
   {
-    "id": "lawyer_007",
+    "id": "007",
     "image": "https://i.ibb.co.com/hJcSPnt0/3F.jpg",
     "name": "Farzana Chowdhury",
     "speciality": "Environmental Law",
@@ -70,7 +70,7 @@
     "availability": "Tuesday, Wednesday, Thursday, Sunday, Friday"
   },
   {
-    "id": "lawyer_008",
+    "id": "008",
     "image": "https://i.ibb.co.com/VYP1tHPV/5M.jpg",
     "name": "Nayeem Islam",
     "speciality": "Environmental Law",
@@ -80,7 +80,7 @@
     "availability": "Saturday, Friday, Monday, Thursday, Sunday"
   },
   {
-    "id": "lawyer_009",
+    "id": "009",
     "image": "https://i.ibb.co.com/9Hc0PQNV/32F.jpg",
     "name": "Sharmin Akter",
     "speciality": "Intellectual Property Law",
@@ -90,7 +90,7 @@
     "availability": "Wednesday, Monday, Sunday"
   },
   {
-    "id": "lawyer_010",
+    "id": "010",
     "image": "https://i.ibb.co.com/TNtWhH9/2M.jpg",
     "name": "Fahim Reza",
     "speciality": "Civil Rights Law",
@@ -100,7 +100,7 @@
     "availability": "Sunday, Friday, Thursday, Tuesday"
   },
   {
-    "id": "lawyer_011",
+    "id": "011",
     "image": "https://i.ibb.co.com/mkFyZ9K/1F.jpg",
     "name": "Lubaba Sayeed",
     "speciality": "Family Law",
@@ -110,7 +110,7 @@
     "availability": "Friday, Thursday, Sunday"
   },
   {
-    "id": "lawyer_012",
+    "id": "012",
     "image": "https://i.ibb.co.com/ksLQdQqh/360-F-295967926-T2n-Unmh-Qc00dwwp3-Ksv-JSPHMP2xhekry.jpg",
     "name": "Mahmudul Hasan",
     "speciality": "Criminal Law",
