@@ -14,7 +14,7 @@ const addBookingToLocalStorage = (id) => {
 }
 const removeBookingFromLocalStorage = (bookingId) => {
     const bookings = getBookingsFromLocalStorage();
-    const updatedBookings = bookings.filter(booking => booking.id !== bookingId);
+    const updatedBookings = bookings.filter(booking => booking !== bookingId);
     setBookingsToLocalStorage(updatedBookings);
 }
 

@@ -1,27 +1,30 @@
 import React, { useEffect } from 'react';
-import { useLoaderData, useParams } from 'react-router';
-import { addBooking, getBookings } from '../../Utilities/LocalStroage';
+import { useLoaderData, useNavigate, useParams } from 'react-router';
+import { addBooking, getBookings } from '../../Utilities/LocalStorage';
+import { ToastContainer, toast } from 'react-toastify';
 
 const LawyerDetails = () => {
     const { id } = useParams();
     const data = useLoaderData();
     const lawyer = data.find(lawyer => lawyer.id === id);
     const { name, image, speciality, experience, license_number, availability, consultation_fee } = lawyer || {};
+    const navigate = useNavigate();
+
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [id]);
-
+    const bookError = () => toast.error("You have already booked this lawyer!");
     const handleBookings = () => {
         const bookingsData = getBookings();
         const isAlreadyBooked = bookingsData.some(booking => booking === id);
         if (isAlreadyBooked) {
-            alert('You have already booked this lawyer!');
+            bookError();
             return;
         }
         addBooking(id);
-        alert('Booking added to local storage!');
-    }
+        navigate('/Bookings', { state: { success: true } }); // Pass success flag
+    };
 
     return (
         <div className="max-w-5xl mx-auto px-4 py-8 space-y-8">
@@ -68,10 +71,27 @@ const LawyerDetails = () => {
                         ⚠️ Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.
                     </span>
                 </div>
-                <button onClick={handleBookings} className="btn btn-success w-full rounded-full mt-4">
+                <button
+                    onClick={() => {
+                        handleBookings();
+                        handleNavigate();
+                    }}
+                    className="btn btn-success w-full rounded-full mt-4">
                     Book Appointment Now
                 </button>
             </div>
+            <ToastContainer
+                position="bottom-right"
+                autoClose={1500}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
         </div>
     );
 };

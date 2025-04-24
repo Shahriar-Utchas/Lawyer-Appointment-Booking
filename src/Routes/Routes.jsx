@@ -29,6 +29,8 @@ export const router = createBrowserRouter([
             {
                 path: "/Bookings",
                 Component: Bookings,
+                loader: () => fetch("../LawyerData.json"),
+                hydrateFallbackElement: <p>Loading, Please Wait....</p>,
             }
         ],
     },
