@@ -3,6 +3,7 @@ import Root from "../Layouts/Root";
 import Home from "../Pages/Home/Home";
 import LawyerDetails from "../Pages/LawyerDetails/LawyerDetails";
 import Blogs from "../Pages/Blogs/Blogs";
+import Bookings from "../Pages/Bookings/Bookings";
 
 export const router = createBrowserRouter([
     {
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
             {
                 path: "/blogs",
                 element: <Blogs></Blogs>
+            },
+            {
+                path: "/Bookings",
+                Component: Bookings,
             }
         ],
     },

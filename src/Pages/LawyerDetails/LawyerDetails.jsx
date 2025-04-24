@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLoaderData, useParams } from 'react-router';
+import { addBooking, getBookings } from '../../Utilities/LocalStroage';
 
 const LawyerDetails = () => {
     const { id } = useParams();
     const data = useLoaderData();
     const lawyer = data.find(lawyer => lawyer.id === id);
     const { name, image, speciality, experience, license_number, availability, consultation_fee } = lawyer || {};
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [id]);
+
+    const handleBookings = () => {
+        const bookingsData = getBookings();
+        const isAlreadyBooked = bookingsData.some(booking => booking === id);
+        if (isAlreadyBooked) {
+            alert('You have already booked this lawyer!');
+            return;
+        }
+        addBooking(id);
+        alert('Booking added to local storage!');
+    }
 
     return (
         <div className="max-w-5xl mx-auto px-4 py-8 space-y-8">
@@ -52,7 +68,7 @@ const LawyerDetails = () => {
                         ⚠️ Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.
                     </span>
                 </div>
-                <button className="btn btn-success w-full rounded-full mt-4">
+                <button onClick={handleBookings} className="btn btn-success w-full rounded-full mt-4">
                     Book Appointment Now
                 </button>
             </div>

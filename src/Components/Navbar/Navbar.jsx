@@ -21,7 +21,7 @@ const Navbar = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-gray-600 font-medium">
                         <li><NavLink to="/" className={getLinkClass}>Home</NavLink></li>
-                        <li><NavLink to="/LawyerDetails/l" className={getLinkClass}>My-Bookings</NavLink></li>
+                        <li><NavLink to="/Bookings" className={getLinkClass}>My-Bookings</NavLink></li>
                         <li><NavLink to="/blogs" className={getLinkClass}>Blogs</NavLink></li>
                         <li><Link to="footer" smooth={true} duration={500}>Contact Us</Link></li>
                     </ul>
@@ -37,7 +37,7 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 text-gray-600 font-medium">
                     <li><NavLink to="/" className={getLinkClass}>Home</NavLink></li>
-                    <li><NavLink to="/LawyerDetails/l" className={getLinkClass}>My-Bookings</NavLink></li>
+                    <li><NavLink to="/Bookings" className={getLinkClass}>My-Bookings</NavLink></li>
                     <li><NavLink to="/blogs" className={getLinkClass}>Blogs</NavLink></li>
                     <li><Link to="footer" smooth={true} duration={1000}>Contact Us</Link></li>
                 </ul>
