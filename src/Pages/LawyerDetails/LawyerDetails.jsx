@@ -7,6 +7,20 @@ const LawyerDetails = () => {
     const { id } = useParams();
     const data = useLoaderData();
     const lawyer = data.find(lawyer => lawyer.id === id);
+
+    if (!lawyer) {
+        return (
+            <div className="max-w-5xl mx-auto px-4 py-8 space-y-8">
+                <div className="bg-red-100 p-6 rounded-xl text-center">
+                    <h2 className="text-3xl font-bold text-red-600">Lawyer Not Found</h2>
+                    <p className="text-gray-500 mt-2">
+                        We're sorry, but the lawyer you're looking for doesn't exist or the ID is invalid.
+                    </p>
+                </div>
+            </div>
+        );
+    }
+
     const { name, image, speciality, experience, license_number, availability, consultation_fee } = lawyer || {};
     const navigate = useNavigate();
 

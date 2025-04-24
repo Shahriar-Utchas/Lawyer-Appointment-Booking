@@ -3,7 +3,7 @@ import { NavLink } from 'react-router';
 import { Button } from 'react-scroll';
 
 const getLinkClass = ({ isActive }) =>
-    isActive ? 'text-green-600 font-semibold' : 'text-gray-600';
+    isActive ? 'text-green-600 font-semibold underline underline-offset-8' : 'text-gray-600';
 
 const Navbar = () => {
     return (
