@@ -2,6 +2,7 @@ import React from 'react';
 import { Lightbulb, Code, BookOpen, ShieldCheck, FileText } from 'lucide-react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { Helmet } from 'react-helmet';
 
 const blogData = [
     {
@@ -64,6 +65,9 @@ const inputRef = useRef();
 const Blogs = () => {
     return (
         <div className="max-w-4xl mx-auto px-4 py-10">
+            <Helmet>
+                <title>Lawyer | Blogs</title>
+            </Helmet>
             <h1 className="text-3xl font-bold text-center mb-8 text-green-600">Blog Articles</h1>
             <div className="space-y-8">
                 {blogData.map((blog, idx) => (

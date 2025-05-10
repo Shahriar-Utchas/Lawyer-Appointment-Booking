@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import {
     BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid,
 } from 'recharts';
+import { Helmet } from 'react-helmet';
 
 const Bookings = () => {
     const allData = useLoaderData();
@@ -57,6 +58,9 @@ const Bookings = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Lawyer | Booking</title>
+            </Helmet>
             {/* Bar Chart */}
             {bookedLawyers.length > 0 && (
                 <div className="w-full flex justify-center my-8">

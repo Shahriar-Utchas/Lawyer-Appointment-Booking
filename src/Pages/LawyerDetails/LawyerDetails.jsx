@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useLoaderData, useNavigate, useParams } from 'react-router';
 import { addBooking, getBookings } from '../../Utilities/LocalStorage';
 import { ToastContainer, toast } from 'react-toastify';
+import { Helmet } from 'react-helmet';
 
 const LawyerDetails = () => {
     const { id } = useParams();
@@ -11,6 +12,9 @@ const LawyerDetails = () => {
     if (!lawyer) {
         return (
             <div className="max-w-5xl mx-auto px-4 py-8 space-y-8">
+                <Helmet>
+                    <title>Lawyer | Details</title>
+                </Helmet>
                 <div className="bg-red-100 p-6 rounded-xl text-center">
                     <h2 className="text-3xl font-bold text-red-600">Lawyer Not Found</h2>
                     <p className="text-gray-500 mt-2">

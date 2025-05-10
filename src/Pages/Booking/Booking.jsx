@@ -1,10 +1,12 @@
 import React from 'react';
 
+
 const Booking = ({ lawyer, handleRemoveBooking }) => {
     const { id, name, speciality, consultation_fee } = lawyer;
 
     return (
         <>
+           
             <div className="bg-white border rounded-xl p-5 mb-4 shadow-sm max-w-4xl mx-auto">
                 {/* Top Row: Name + Fee */}
                 <div className="flex justify-between items-start">
